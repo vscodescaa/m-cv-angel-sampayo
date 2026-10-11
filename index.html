@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ángel Sampayo — Product builder</title>
+  <meta name="description" content="Ángel Sampayo construye productos digitales de principio a fin. Fundador y único desarrollador de Edooly, una plataforma gamificada para aprender matemáticas." />
+  <meta name="theme-color" content="#0A0C1B" />
+  <meta property="og:title" content="Ángel Sampayo — Product builder" />
+  <meta property="og:description" content="Fundador y único desarrollador de Edooly. Producto, diseño, código e infraestructura." />
+  <meta property="og:image" content="assets/img/me.webp" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="modulepreload" href="vendor/three/three.module.min.js" />
+</head>
+<body>
+  <a class="skip" href="#sobre-mi" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#inicio" aria-label="Ángel Sampayo, inicio">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6.5" /><ellipse cx="16" cy="16" rx="14" ry="5.2" transform="rotate(-24 16 16)" /></svg>
+      <span>Ángel Sampayo</span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Principal">
+      <a href="#edooly">Edooly</a>
+      <a href="#proyectos" data-i18n="nav.work">Proyectos</a>
+      <a href="#trayectoria" data-i18n="nav.path">Trayectoria</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__lang" id="langToggle" type="button" aria-label="Switch to English">EN</button>
+      <a class="nav__cv" href="assets/cv/angel-sampayo-cv.pdf" download data-i18n="nav.cv">Descargar CV</a>
+      <button class="nav__menu" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span class="sr" data-i18n="nav.menu">Menú</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-label="Presentación">
+      <canvas class="hero__canvas" id="orbit" aria-hidden="true"></canvas>
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <div class="hero__inner wrap">
+        <p class="hero__status"><span class="dot"></span><span data-i18n="hero.status">Monterrey, México. Abierto a oportunidades.</span></p>
+        <h1 class="hero__name"><span>Ángel</span><span>Sampayo</span></h1>
+        <div class="hero__foot">
+          <p class="hero__lead" data-i18n="hero.lead">Construyo productos digitales completos: los pienso, los diseño, los programo, los despliego y los mantengo vivos. Mi proyecto principal es Edooly.</p>
+          <div class="hero__cta">
+            <a class="btn btn--light" href="#edooly" data-i18n="hero.cta">Conocer Edooly</a>
+            <a class="btn btn--ghost" href="#proyectos" data-i18n="hero.cta2">Ver todo el trabajo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="about tone-moon" id="sobre-mi">
+      <div class="wrap about__grid">
+        <h2 class="about__statement" data-i18n="about.title">Me gusta convertir ideas en cosas que la gente de verdad usa.</h2>
+        <figure class="about__portrait">
+          <img src="assets/img/me.webp" width="443" height="443" alt="Retrato de Ángel Sampayo" data-i18n-alt="about.alt" loading="lazy" />
+        </figure>
+        <div class="about__body">
+          <p data-i18n-html="about.p1">Estudio Ingeniería en Robótica y Sistemas Digitales en el <strong>Tecnológico de Monterrey</strong>. Empecé a construir software en 2024 con flujos de desarrollo asistidos por IA y desde entonces he llevado proyectos del primer boceto a producción.</p>
+          <p data-i18n="about.p2">Trabajo en todas las capas de un producto: decisiones de producto, diseño de interfaz, frontend, backend, bases de datos, servidores, despliegues y automatización. Aprendo lo que el proyecto pide, cuando lo pide.</p>
+          <p data-i18n="about.p3">Lo que más me importa es construir cosas con propósito: productos que ayuden de verdad a alguien.</p>
+        </div>
+        <dl class="facts">
+          <div><dt data-i18n="facts.base">Base</dt><dd>Monterrey, México</dd></div>
+          <div><dt data-i18n="facts.since">Construyendo desde</dt><dd>2024</dd></div>
+          <div><dt data-i18n="facts.study">Estudios</dt><dd data-i18n="facts.studyV">Tec de Monterrey</dd></div>
+          <div><dt data-i18n="facts.lang">Idiomas</dt><dd data-i18n="facts.langV">Español, inglés C1, francés A1</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- EDOOLY -->
+    <section class="edooly tone-night" id="edooly">
+      <div class="wrap">
+        <div class="edooly__head">
+          <div class="edooly__title">
+            <img class="edooly__edoo" src="assets/img/edoo.webp" width="320" height="320" alt="" loading="lazy" />
+            <h2>Edooly</h2>
+          </div>
+          <div class="edooly__intro">
+            <p class="edooly__role"><span data-i18n="edooly.role">Fundador, CEO y único desarrollador</span><span data-i18n="edooly.when">2024 – hoy</span></p>
+            <p class="edooly__lead" data-i18n="edooly.lead">Una plataforma gamificada para aprender matemáticas en español. Es mi proyecto central: lo diseñé, lo programé y lo opero yo, desde el motor de lecciones hasta los pagos, los servidores y la app de Android.</p>
+            <div class="edooly__links">
+              <a class="btn btn--sun" href="https://edooly.com" target="_blank" rel="noopener" data-i18n="edooly.visit">Visitar edooly.com</a>
+              <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.edooly.app" target="_blank" rel="noopener" data-i18n="edooly.play">Ver en Google Play</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase">
+          <figure class="showcase__worlds">
+            <img src="assets/img/edooly-worlds.webp" width="1000" height="825" alt="Selector de mundos de Edooly: planetas de Aritmética, Álgebra, Geometría y Lógica orbitando" data-i18n-alt="edooly.altWorlds" loading="lazy" />
+            <figcaption data-i18n="edooly.capWorlds">Cada rama de las matemáticas es un mundo con su propio camino de lecciones.</figcaption>
+          </figure>
+          <div class="phone" aria-hidden="false">
+            <div class="phone__frame">
+              <img src="assets/img/edooly-app.webp" width="720" height="1279" alt="Pantalla principal de la app de Edooly en Android" data-i18n-alt="edooly.altApp" loading="lazy" />
+            </div>
+          </div>
+          <figure class="showcase__lesson">
+            <img src="assets/img/edooly-lesson.webp" width="1200" height="944" alt="Una lección interactiva de Edooly que explica cómo contar un grupo de fichas" data-i18n-alt="edooly.altLesson" loading="lazy" />
+            <figcaption data-i18n="edooly.capLesson">Lecciones cortas y visuales, con práctica guiada y respuesta inmediata.</figcaption>
+          </figure>
+        </div>
+
+        <div class="built">
+          <h3 class="built__title" data-i18n="edooly.builtTitle">Lo que construí</h3>
+          <ul class="built__list">
+            <li><h4 data-i18n="b1.t">Motor de lecciones interactivas</h4><p data-i18n="b1.d">Visuales matemáticas manipulables y preguntas guiadas, descritas como contenido estructurado. Validadores propios bloquean el build si una lección rompe el contrato.</p></li>
+            <li><h4 data-i18n="b2.t">Gamificación de punta a punta</h4><p data-i18n="b2.d">Ligas semanales por divisiones con rivales calibrados, rachas con congelador, misiones, cofres, ruleta diaria y una economía de gemas con su libro contable.</p></li>
+            <li><h4 data-i18n="b3.t">Monetización</h4><p data-i18n="b3.d">Suscripción Premium con Stripe, tienda, sistema de energía y anuncios en la app.</p></li>
+            <li><h4 data-i18n="b4.t">App de Android</h4><p data-i18n="b4.d">Shell nativo con Capacitor publicado en Google Play, notificaciones push, inicio de sesión con Google y versiones verificadas antes de cada subida.</p></li>
+            <li><h4 data-i18n="b5.t">Infraestructura propia</h4><p data-i18n="b5.d">Servidor VPS con PostgreSQL en Docker, despliegues con verificación de salud, respaldos automáticos y diagnóstico de latencia en producción.</p></li>
+            <li><h4 data-i18n="b6.t">Analítica y decisiones</h4><p data-i18n="b6.d">Embudo desde la instalación hasta la primera lección, recorrido de aprendizaje y Firebase Analytics para decidir qué mejorar con datos reales.</p></li>
+          </ul>
+        </div>
+
+        <div class="spec">
+          <h3 data-i18n="edooly.specTitle">Ficha técnica</h3>
+          <dl>
+            <div><dt>Stack</dt><dd>Node.js, Express, PostgreSQL 17, Prisma, Capacitor, Stripe, Firebase</dd></div>
+            <div><dt data-i18n="spec.repo">Repositorio</dt><dd data-i18n="spec.repoV">726 commits desde mayo de 2026</dd></div>
+            <div><dt data-i18n="spec.data">Datos</dt><dd data-i18n="spec.dataV">83 modelos y 55 migraciones de base de datos</dd></div>
+            <div><dt data-i18n="spec.tests">Pruebas</dt><dd data-i18n="spec.testsV">236 archivos de pruebas automatizadas</dd></div>
+            <div><dt data-i18n="spec.langs">Idiomas</dt><dd data-i18n="spec.langsV">Español e inglés</dd></div>
+            <div><dt data-i18n="spec.platforms">Plataformas</dt><dd data-i18n="spec.platformsV">Web y Android; iOS en preparación</dd></div>
+          </dl>
+        </div>
+
+        <div class="eco">
+          <div class="eco__head">
+            <h3 data-i18n="eco.title">Herramientas alrededor de Edooly</h3>
+            <p data-i18n="eco.lead">Cuando el producto necesitó algo que no existía, lo construí aparte.</p>
+          </div>
+          <ul class="eco__list">
+            <li><h4 data-i18n="eco.c.t">Repositorio de contenido</h4><p data-i18n="eco.c.d">Espacio de trabajo para el equipo de contenido: coordino a colaboradores que crean las lecciones de Aritmética, Álgebra y Geometría, con validadores y sincronización hacia la plataforma.</p></li>
+            <li><h4>Content Studio</h4><p data-i18n="eco.s.d">Genera videos verticales de ejercicios: guion con Gemini, validación matemática, voz con ElevenLabs y render con Remotion usando las visuales reales de Edooly.</p></li>
+            <li><h4>Edooly Analytics</h4><p data-i18n="eco.a.d">Panel interno en Next.js, de solo lectura sobre producción, para entender el camino de cada usuario desde que abre la app hasta su primera lección.</p></li>
+            <li><h4>Edoo Video Studio</h4><p data-i18n="eco.v.d">Estudio local de imagen a video que orquesta GPUs en la nube y guarda cada corrida de forma reproducible.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTROS PROYECTOS -->
+    <section class="work tone-paper" id="proyectos">
+      <div class="wrap">
+        <h2 class="section-title" data-i18n="work.title">Otros proyectos</h2>
+
+        <article class="project">
+          <figure class="project__shot project__shot--dark">
+            <img src="assets/img/runode.webp" width="1427" height="858" alt="Interfaz de escritorio de Runode con tareas, límites de uso y actividad" data-i18n-alt="runode.alt" loading="lazy" />
+          </figure>
+          <div class="project__text">
+            <h3>Runode</h3>
+            <p class="project__meta" data-i18n="runode.meta">Exploración de dos semanas, septiembre de 2026</p>
+            <p data-i18n="runode.d1">Un centro de control de escritorio para agentes de programación con IA, como Claude Code y Codex. No trae su propio modelo: organiza las cuentas y los agentes que ya tienes.</p>
+            <p data-i18n="runode.d2">En ese tiempo llegó a ejecutar tareas reales, con cola y programación, detección de límites de uso con reanudación y una bóveda de contexto por proyecto. También hice su web con compra de licencias.</p>
+            <p class="project__stack">Tauri 2, React, TypeScript, Rust, SQLite</p>
+            <a class="link" href="https://github.com/vscodescaa/runode-web" target="_blank" rel="noopener" data-i18n="runode.link">Ver la web en GitHub</a>
+          </div>
+        </article>
+
+        <article class="project project--flip">
+          <figure class="project__shot">
+            <img src="assets/img/hvackeros.webp" width="1600" height="794" alt="Página de inicio del sitio de HVACKEROS" data-i18n-alt="hvac.alt" loading="lazy" />
+          </figure>
+          <div class="project__text">
+            <h3>HVACKEROS</h3>
+            <p class="project__meta" data-i18n="hvac.meta">Director de Finanzas y desarrollador web, desde mayo de 2026</p>
+            <p data-i18n="hvac.d1">Grupo estudiantil del Tec de Monterrey enfocado en HVAC, energía y climatización, afiliado a ASHRAE. Diseñé y construí su sitio web y, dentro de la mesa directiva, llevo las finanzas y el presupuesto.</p>
+            <p class="project__stack">Vite, HTML, CSS, JavaScript</p>
+            <p class="project__note" data-i18n="hvac.note">Sitio por publicarse.</p>
+          </div>
+        </article>
+
+        <article class="contrib">
+          <div>
+            <h3>Política Abierta</h3>
+            <p class="project__meta" data-i18n="pa.meta">Contribuidor voluntario, desde septiembre de 2026</p>
+          </div>
+          <p data-i18n="pa.d">Plataforma ciudadana de transparencia legislativa en México, creada y mantenida por otro equipo. Aporto como voluntario correcciones de bugs y mejoras en su sitio web.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TRAYECTORIA -->
+    <section class="path tone-moon" id="trayectoria">
+      <div class="wrap">
+        <h2 class="section-title" data-i18n="path.title">Trayectoria</h2>
+        <ol class="timeline">
+          <li><time>2024</time><div><h4 data-i18n="t1.t">Empiezo a construir software</h4><p data-i18n="t1.d">Aprendo desarrollando con IA y nace Edooly, que se convierte en mi proyecto principal.</p></div></li>
+          <li><time data-i18n="t2.when">Mayo 2026</time><div><h4 data-i18n="t2.t">Director de Finanzas en HVACKEROS</h4><p data-i18n="t2.d">Finanzas, presupuesto y presencia digital del grupo estudiantil.</p></div></li>
+          <li><time data-i18n="t3.when">Agosto 2026</time><div><h4 data-i18n="t3.t">Tecnológico de Monterrey</h4><p data-i18n="t3.d">Inicio Ingeniería en Robótica y Sistemas Digitales. Egreso esperado en 2030.</p></div></li>
+          <li><time data-i18n="t4.when">Septiembre 2026</time><div><h4 data-i18n="t4.t">Runode y Política Abierta</h4><p data-i18n="t4.d">Dos semanas explorando herramientas para agentes de IA, y voluntariado en tecnología cívica.</p></div></li>
+          <li><time data-i18n="t5.when">Hoy</time><div><h4 data-i18n="t5.t">Edooly en web y Android</h4><p data-i18n="t5.d">Iterando el producto con analítica real y un equipo de contenido.</p></div></li>
+        </ol>
+
+        <div class="cols">
+          <div class="col">
+            <h3 data-i18n="edu.title">Formación</h3>
+            <div class="entry">
+              <h4>Tecnológico de Monterrey</h4>
+              <p data-i18n="edu.tec">Ingeniería en Robótica y Sistemas Digitales, 2026 – 2030</p>
+            </div>
+            <div class="entry">
+              <h4>Prepa UDEM</h4>
+              <p data-i18n="edu.ib">Programa del Bachillerato Internacional (IB), con énfasis en matemáticas</p>
+            </div>
+            <h3 class="col__sub" data-i18n="lang.title">Idiomas</h3>
+            <ul class="langs">
+              <li><span data-i18n="lang.es">Español</span><span data-i18n="lang.esV">Nativo</span></li>
+              <li><span data-i18n="lang.en">Inglés</span><span data-i18n="lang.enV">C1, certificado por el Tec</span></li>
+              <li><span data-i18n="lang.fr">Francés</span><span>A1</span></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3 data-i18n="how.title">Cómo trabajo</h3>
+            <p class="col__lead" data-i18n="how.lead">Frecuencia real de uso, no porcentajes autoasignados.</p>
+            <ul class="usage">
+              <li><span data-i18n="how.ai">Desarrollo asistido por IA</span><span class="usage__f" data-i18n="how.daily">A diario</span></li>
+              <li><span data-i18n="how.product">Construcción de producto</span><span class="usage__f" data-i18n="how.daily">A diario</span></li>
+              <li><span data-i18n="how.front">Frontend e interfaz</span><span class="usage__f" data-i18n="how.often">Frecuente</span></li>
+              <li><span data-i18n="how.back">Backend y datos</span><span class="usage__f" data-i18n="how.often">Frecuente</span></li>
+              <li><span data-i18n="how.infra">Infraestructura y despliegues</span><span class="usage__f" data-i18n="how.often">Frecuente</span></li>
+            </ul>
+            <p class="stack">Claude Code, Codex, React, TypeScript, Node.js, PostgreSQL, MySQL, Prisma, Rust, Tauri, Capacitor, Git, DNS, Linux</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact tone-night" id="contacto">
+      <div class="wrap">
+        <h2 class="contact__title" data-i18n="contact.title">Construyamos algo útil.</h2>
+        <a class="contact__mail" href="mailto:angel.sampayo.cortez@outlook.com">angel.sampayo.cortez@outlook.com</a>
+        <div class="contact__links">
+          <a class="btn btn--light" href="mailto:angel.sampayo.cortez@outlook.com" data-i18n="contact.mail">Escribirme</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/sampayo-cortez" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/vscodescaa" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="assets/cv/angel-sampayo-cv.pdf" download data-i18n="nav.cv">Descargar CV</a>
+        </div>
+      </div>
+      <footer class="wrap">
+        <div class="footer">
+          <span>© <span id="year">2026</span> Ángel Sampayo</span>
+          <a href="#inicio" data-i18n="footer.top">Volver arriba</a>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/orbit.js"></script>
+</body>
+</html>
